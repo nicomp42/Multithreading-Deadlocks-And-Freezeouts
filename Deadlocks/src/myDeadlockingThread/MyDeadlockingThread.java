@@ -1,4 +1,4 @@
-package myThread;
+package myDeadlockingThread;
 
 import java.util.Random;
 

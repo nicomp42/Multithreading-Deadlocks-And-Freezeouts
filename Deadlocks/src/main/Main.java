@@ -7,7 +7,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
-import myThread.MyDeadlockingThread;
+import myDeadlockingThread.MyDeadlockingThread;
 import sharedObject.SharedObject;
 import uncooperativeThread.UncooperativeThread;
 
