@@ -7,7 +7,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
-import myThread.MyThread;
+import myThread.MyDeadlockingThread;
 import sharedObject.SharedObject;
 import uncooperativeThread.UncooperativeThread;
 
@@ -22,17 +22,17 @@ public class Main {
 		Object lock1, lock2;
 		lock1 = new Object();
 		lock2 = new Object();
-		List<MyThread> myThreads = new ArrayList<MyThread>();
+		List<MyDeadlockingThread> myThreads = new ArrayList<MyDeadlockingThread>();
 		int threads = 2;
 		for (int i = 0; i < threads; i++) {
-			myThreads.add(new MyThread(i, lock1, lock2));
+			myThreads.add(new MyDeadlockingThread(i, lock1, lock2));
 		}
 
-		for (MyThread t : myThreads) {
+		for (MyDeadlockingThread t : myThreads) {
 			t.start();
 		}
 		//synchronized(lock1) {			// This is playing dirty
-			for (MyThread t : myThreads) {
+			for (MyDeadlockingThread t : myThreads) {
 				try {t.join();} catch (Exception ex) {}
 			}
 		//}

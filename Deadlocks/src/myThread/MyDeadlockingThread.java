@@ -2,11 +2,11 @@ package myThread;
 
 import java.util.Random;
 
-public class MyThread extends Thread {
+public class MyDeadlockingThread extends Thread {
 	private int id;
 	Object lock1, lock2;
 	
-	public MyThread(int id, Object lock1, Object lock2) {
+	public MyDeadlockingThread(int id, Object lock1, Object lock2) {
 		this.id = id;
 		this.lock1 = lock1;
 		this.lock2 = lock2;
