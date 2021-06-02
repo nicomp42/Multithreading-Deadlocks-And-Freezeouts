@@ -1,3 +1,7 @@
+/*
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ */
 package main;
 
 import java.util.ArrayList;
@@ -34,7 +38,8 @@ public class Main {
 		//}
 	}
 	/**
-	 * We will try to call SharedObject.methodC from two threads. The first one will get in, the second will have to wait.
+	 * We will try to call SharedObject.methodC from two threads. 
+	 * The first one will get in, the second will have to wait. A freezeout. I made that up.
 	 */
 	private static void uncooperativeThreads() {
 		SharedObject sharedObject = new SharedObject();

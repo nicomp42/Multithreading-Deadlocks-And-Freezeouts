@@ -1,3 +1,7 @@
+/*
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ */
 package uncooperativeThread;
 
 import sharedObject.SharedObject;
